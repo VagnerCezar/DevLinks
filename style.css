@@ -24,12 +24,9 @@
   --switch-bg-url: url(./assets/sun-.svg);
 }
 
-body{ 
-  /* background-image: url(./assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover; */
+body{
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body *{
@@ -38,8 +35,6 @@ body *{
 }
 
 #container{
-  
-  /* border: 1px solid red; */
   width: 100%;
   max-width: 588px;
   margin: 56px auto 0px;
@@ -66,7 +61,6 @@ body *{
 
 /*switch*/
 #switch {
-  /* border: 1px solid red; */
   position: relative;
   width: 64px;
   margin: 0 auto;
@@ -83,38 +77,14 @@ body *{
   left: 0;
   z-index: 1;
   
-  /*Alinhando na horizontal*/
   top: 50%;
   transform: translateY(-50%);
-
-/*
-Alinhando na vertical:
-left ou right de 50%
-translateX(-50%)
-*/
 }
 
 .light #switch button {
   right: 0;
   left: initial;
 }
-
-/*
-NOTA - ALINHAMENTOS -
-
-Display BLOCK:
-margin: 0 auto; -> 4px na vertical e auto nas laterais
-
-
-DISPLAY FLEX:
-display: flex;
-align-items: center;
-justify-content: center;
-
-
-ALINHAMENTOS DE TEXTO:
-text-align: center;
-*/
 
 #switch span{
   display: block;
@@ -135,7 +105,6 @@ ul{
   flex-direction: column;
   gap: 16px;
   padding: 24px 0;
-
 }
 
 ul li a {
@@ -190,4 +159,15 @@ footer{
   padding: 24px;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px){
+  :root {
+    --bg-url: url(./assets/bg-desktop-dark.jpg);
+  }
+
+  .light{
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
